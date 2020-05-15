@@ -1,0 +1,30 @@
+const React = require('react');
+
+exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
+  if (
+    process.env.NODE_ENV === 'production' ||
+    pluginOptions.includeInDevelopment
+  ) {
+    const scriptUrl = pluginOptions.scriptUrl || '';
+    const dataLayerName = pluginOptions.dataLayerName || 'c';
+    const defaultDataLayer = pluginOptions.defaultDataLayer || {};
+    const dataLayer = () => {
+      return {
+        __html: `window.${dataLayerName} = ${JSON.stringify(
+          defaultDataLayer
+        )};`,
+      };
+    };
+
+    setHeadComponents([
+      <>
+        <script
+          key={`gatsby-plugin-adobe-dtm-datalayer`}
+          id={`gatsby-plugin-adobe-dtm-datalayer`}
+          dangerouslySetInnerHTML={dataLayer()}
+        />
+        <script key={`gatsby-plugin-adobe-dtm`} src={scriptUrl} async />
+      </>,
+    ]);
+  }
+};
