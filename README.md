@@ -11,7 +11,7 @@ plugins: [
   {
     resolve: 'gatsby-plugin-adobe-launch',
     options: {
-      scriptURL: 'YOUR_ADOBE_LAUNCH_SCRIPT_URL',
+      scriptUrl: 'YOUR_ADOBE_LAUNCH_SCRIPT_URL',
 
       // Include Adobe Launch in development.
       // Defaults to false meaning Launch will only be loaded in production.
