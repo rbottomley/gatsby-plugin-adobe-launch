@@ -2,7 +2,7 @@
   "name": "gatsby-plugin-adobe-launch",
   "description": "Gatsby plugin to add Adobe Launch to a site",
   "author": "Nick O'Sullivan",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
@@ -14,13 +14,13 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "gatsby": "^2.0.0"
+    "gatsby": "^3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nbaosullivan/gatsby-plugin-adobe-launch.git"
+    "url": "https://github.com/rbottomley/gatsby-plugin-adobe-launch.git"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=15.0.0"
   }
 }
