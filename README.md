@@ -19,12 +19,12 @@ plugins: [
       includeInDevelopment: false,
 
       // datalayer to be set before DTM is loaded
-      defaultDataLayer: { platform: 'gatsby' },
+      //defaultDataLayer: { platform: 'gatsby' },
 
-      dataLayerName: 'YOUR_DATA_LAYER_NAME',
+      //dataLayerName: 'YOUR_DATA_LAYER_NAME',
       // defaults to gatsbyRouteChange
-      routeChangeEventName: 'gatsbyRouteChange',
+      //routeChangeEventName: 'gatsbyRouteChange',
     },
   },
-];
+]
 ```
